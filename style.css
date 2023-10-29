@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green:#4ebe4e;
+    --orange:#f7a833;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.navbar{
+    background-color: var(--orange);
+    display: flex;
+    min-height: 4em;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+.navbar .title{
+    width: 35vw;
+}
+.title h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family:cursive;
+    font-size: 2.5em;
+    /* background: palegoldenrod; */
+}
+.navbar .nav{
+    width: 65vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav a{
+    background: var(--orange);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* width: 100%; */
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2vw;
+    font-weight: lighter;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 15px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+.nav span{
+    font-size: 18px;
+    background-color: var(--orange);
+}
+.nav a:hover{
+    background-color: #f5740b;
+}
+.geeks{
+    margin-top: 4em;
+    background-color: black;
+    color: white;
+    height: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.line{
+    color: white;
+}
+#aboutme{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* background: pink; */
+}
+.head h1{
+    font-size: 3.5em;
+    text-transform: capitalize;
+    color: var(--orange);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.head hr{
+    width: 6em;
+    border: none;
+    height: 2px;
+    background-color: var(--orange);
+}
+.intro{
+    /* background: pink; */
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img img{
+    width: 30vw;
+    border-radius: 100%;
+}
+#text{
+    width: 60%;
+    margin: 10px 20px;
+    /* background: #000; */
+    padding: 10px;
+    line-height: 29px;
+}
+#projects{
+    min-height: 105vh;
+    width: 100%;
+    background-color: #afafaf;
+    position: relative;
+}
+#projects ul{
+    margin: 0px 20vw;
+    line-height: 35px;
+    font-size: 22px;
+    text-transform: capitalize;
+    padding: 10px;
+}
+#achievements{
+    background-color: black;
+    color: white;
+    min-height: 105vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+#achievements .points{
+    margin: 50px 20vw;
+    /* background: red; */
+    height: 60%;
+}
+.points ul {
+    margin-bottom: 50px;
+}
+.points ul>ul>li{
+    margin: 10px 40px;
+}
+.points>ul>li{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#contact{
+    min-height: 100vh;
+    background-color: #afafaf;
+}
+#contact form{
+    background-color: black;
+    color: white;
+    max-width: 450px;
+    margin: 0px auto;
+    padding: 15px 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#contact form div{
+    display: flex;
+}
+#contact form label{
+    width: 35%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+}
+#contact form input,textarea{
+    width: 65%;
+}
+button{
+    margin-left: 35%;
+    font-size: 18px;
+    padding: 0 2px;
+}
+.last ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    background-color: var(--green);
+    height: 60px;
+}
+.last ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* background: pink; */
+}
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(104, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer p{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+@media (max-width:600px){
+    .geeks{
+        margin-top: 6em;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 0px;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    .nav a{
+        padding: 0;
+        font-size: 12px;
+        height: 20px;
+        font-size: 14px;
+        flex: 1;
+    }
+    .head h1{
+        font-size: 36px;
+    }
+    .intro{
+        flex-direction: column;
+        align-items: center;
+    }
+    #text{
+        width: 100vw;
+        padding: 20px;
+    }
+    #projects ul{
+        margin: 10px 10vw;
+    }
+    .ad{
+        display: none;
+    }
+    .last{
+        font-size: 12px;
+    }
+    footer p{
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    #contact form{
+        height: 400px;
+    }
+    footer a{
+        bottom: 10px;
+        right: 10px;
+        font-size: 16px;
+    }
+    .navbar .nav{
+        width: 100%;
+    }
+}
+@media (min-width:600px) and (max-width:801px){
+    .title h1{
+        font-size: 26px;
+    }
+    .ad{
+        top: 30%;
+        padding: 5px;
+    }
+    .ad h2{
+        font-size: 28px;
+        text-align: center;
+    }
+}
